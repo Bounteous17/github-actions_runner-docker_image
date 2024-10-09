@@ -32,11 +32,11 @@ install_aws_cli() {
 
   # Download AWS CLI zip
   echo "Downloading AWS CLI for $ARCH..."
-  curl -o "awscliv2.zip" "$CLI_URL"
+  sudo curl -o "awscliv2.zip" "$CLI_URL"
 
   # Unzip the downloaded file
   echo "Unzipping AWS CLI..."
-  unzip awscliv2.zip
+  sudo unzip awscliv2.zip
 
   # Run the install script
   echo "Installing AWS CLI..."
@@ -47,7 +47,7 @@ install_aws_cli() {
 
   # Clean up
   echo "Cleaning up..."
-  rm -rf awscliv2.zip aws
+  sudo rm -rf awscliv2.zip aws
 }
 
 # Run the install function

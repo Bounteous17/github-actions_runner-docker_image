@@ -30,8 +30,8 @@ install_kubectl() {
     CLI_URL="https://dl.k8s.io/release/v1.30.0/bin/linux/arm64/kubectl"
   fi
 
-  wget "$CLI_URL"
-  install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+  sudo wget "$CLI_URL"
+  sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 }
 
 # Run the install function
